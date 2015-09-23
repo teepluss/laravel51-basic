@@ -11,6 +11,10 @@
 |
 */
 
+Route::group(['namespace' => 'Demo', 'prefix' => 'demo'], function() {
+	Route::controller('scripts', 'ScriptsController');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });

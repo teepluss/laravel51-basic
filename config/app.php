@@ -145,7 +145,14 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-    ],
+        /*
+         * External packages...
+         */
+        Darsain\Console\ConsoleServiceProvider::class,
+        Teepluss\Theme\ThemeServiceProvider::class,
+        Teepluss\Gateway\GatewayServiceProvider::class,
+
+    ],  
 
     /*
     |--------------------------------------------------------------------------
@@ -194,6 +201,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
+        'Theme'     => Teepluss\Theme\Facades\Theme::class,
+        'Gateway'   => Teepluss\Gateway\Facades\Gateway::class,
     ],
 
 ];
